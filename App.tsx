@@ -31,12 +31,12 @@ const DRMExample = () => {
   );
 
   // Android — Widevine
-  const [mpdUrl, setMpdUrl] = React.useState('https://video.gumlet.io/5f462c1561cf8a766464ffc4/67062bea5d11d5a0fec5d026/main.mpd');
+  const [mpdUrl, setMpdUrl] = React.useState('<Your MPD URL>');
   const [widevineProxyUrl, setWidevineProxyUrl] = React.useState(
-    'https://widevine-stage.gumlet.com/licence/5f2bdde3e93619b8859d8831/67062bea5d11d5a0fec5d026',
+    '<Your Widevine proxy license URL>',
   );
   const [widevineProxySecret, setWidevineProxySecret] = React.useState(
-    '191d94ce92812c6eeb530758b5a7d977',
+    '<Your Widevine proxy secret (Base64)>',
   );
   const [tokenLifetimeSeconds, setTokenLifetimeSeconds] = React.useState(
     String(DEFAULT_TOKEN_LIFETIME_SECONDS),
