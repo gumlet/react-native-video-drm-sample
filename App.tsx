@@ -10,8 +10,8 @@ import {
   Button,
   ActivityIndicator,
 } from 'react-native';
-import Video, {DRMType, ReactVideoSourceProperties} from 'react-native-video';
-import {signWidevineLicenseUrl} from './utils/signWidevineLicense';
+import Video, { DRMType, ReactVideoSourceProperties } from 'react-native-video';
+import { signWidevineLicenseUrl } from './utils/signWidevineLicense';
 
 type SourceType = ReactVideoSourceProperties | null;
 
@@ -31,12 +31,12 @@ const DRMExample = () => {
   );
 
   // Android — Widevine
-  const [mpdUrl, setMpdUrl] = React.useState('<Your MPD URL>');
+  const [mpdUrl, setMpdUrl] = React.useState('https://video.gumlet.io/5f462c1561cf8a766464ffc4/67062bea5d11d5a0fec5d026/main.mpd');
   const [widevineProxyUrl, setWidevineProxyUrl] = React.useState(
-    '<Widevine licence proxy URL, e.g. https://widevine.gumlet.com/licence/{orgId}>',
+    'https://widevine-stage.gumlet.com/licence/5f2bdde3e93619b8859d8831/67062bea5d11d5a0fec5d026',
   );
   const [widevineProxySecret, setWidevineProxySecret] = React.useState(
-    '<Base64 proxy secret from Gumlet>',
+    '191d94ce92812c6eeb530758b5a7d977',
   );
   const [tokenLifetimeSeconds, setTokenLifetimeSeconds] = React.useState(
     String(DEFAULT_TOKEN_LIFETIME_SECONDS),
@@ -64,7 +64,7 @@ const DRMExample = () => {
         licenseServer: fairplayLicense,
         certificateUrl: fairplayCertificate,
         getLicense: (spcString, _contentId, licenseUrl, _loadedLicenseUrl) => {
-          const body = JSON.stringify({spc: spcString});
+          const body = JSON.stringify({ spc: spcString });
 
           return fetch(`${licenseUrl}`, {
             method: 'POST',
