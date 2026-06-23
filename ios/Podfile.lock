@@ -1242,7 +1242,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - react-native-video (6.7.0):
+  - react-native-video (6.19.2):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1255,7 +1255,7 @@ PODS:
     - React-featureflags
     - React-graphics
     - React-ImageManager
-    - react-native-video/Video (= 6.7.0)
+    - react-native-video/Video (= 6.19.2)
     - React-NativeModulesApple
     - React-RCTFabric
     - React-rendererdebug
@@ -1264,7 +1264,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - react-native-video/Fabric (6.7.0):
+  - react-native-video/Fabric (6.19.2):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1285,7 +1285,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - react-native-video/Video (6.7.0):
+  - react-native-video/Video (6.19.2):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1574,7 +1574,7 @@ PODS:
     - React-logger (= 0.76.1)
     - React-perflogger (= 0.76.1)
     - React-utils (= 0.76.1)
-  - RNCAsyncStorage (2.0.0):
+  - RNCAsyncStorage (2.2.0):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1840,7 +1840,7 @@ SPEC CHECKSUMS:
   React-logger: 97c9dafae1f1a638001a9d1d0e93d431f2f9cb7b
   React-Mapbuffer: 3146a13424f9fec2ea1f1462d49d566e4d69b732
   React-microtasksnativemodule: 02d218c79c72d373a92a8552183f4ead0d1c6e05
-  react-native-video: dd8db5a31e1bf35e00c5d1c87250d1f16d9a02a1
+  react-native-video: c180e01cd10db6081a4365535a0fc2dc4a1e0b3d
   React-nativeconfig: 93fe8c85a8c40820c57814e30f3e44b94c995a7b
   React-NativeModulesApple: b3e076fd0d7b73417fe1e8c8b26e3c57ae9b74aa
   React-perflogger: 1c55bcd3c392137cbaf0d21d8bb87ce9a0cebb15
@@ -1868,10 +1868,10 @@ SPEC CHECKSUMS:
   React-utils: 5362bd16a9563f9916e7a56c011ddc533507650f
   ReactCodegen: 865bafc5c17ec2181620ced1a32c39c38ab2951d
   ReactCommon: 422e364463f33e336fc4db196aeb50fd801d90d6
-  RNCAsyncStorage: 597673c6086d359029afefef8fd5859f1f35ab87
+  RNCAsyncStorage: e261f5fef2092b11db2e9dfd0cf3620b1d88dca3
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
   Yoga: db69236006b8b1c6d55ab453390c882306cbf219
 
 PODFILE CHECKSUM: 03ad0ae84bcf3ef7de8b5558fcff89b537da09f9
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.16.2
