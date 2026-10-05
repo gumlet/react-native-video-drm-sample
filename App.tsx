@@ -82,7 +82,11 @@ const DRMExample = () => {
         },
       };
     } else if (Platform.OS === 'android') {
-      if (!mpdUrl || !widevineProxyUrl || !widevineProxySecret) {
+      const trimmedMpd = mpdUrl.trim();
+      const trimmedProxyUrl = widevineProxyUrl.trim();
+      const trimmedSecret = widevineProxySecret.trim();
+
+      if (!trimmedMpd || !trimmedProxyUrl || !trimmedSecret) {
         Alert.alert(
           'Error',
           'Please enter MPD URL, Widevine proxy URL, and proxy secret',
@@ -95,12 +99,12 @@ const DRMExample = () => {
 
       try {
         const signedLicenseUrl = signWidevineLicenseUrl(
-          widevineProxyUrl,
-          widevineProxySecret,
+          trimmedProxyUrl,
+          trimmedSecret,
           lifetime,
         );
 
-        newSource.uri = mpdUrl;
+        newSource.uri = trimmedMpd;
         newSource.type = 'mpd';
         newSource.drm = {
           type: DRMType.WIDEVINE,

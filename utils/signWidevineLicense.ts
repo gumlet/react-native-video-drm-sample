@@ -11,7 +11,19 @@ export function signWidevineLicenseUrl(
   proxySecretBase64: string,
   tokenLifetimeSeconds: number,
 ): string {
-  const secretKey = CryptoJS.enc.Base64.parse(proxySecretBase64);
+  let cleanSecret = proxySecretBase64.trim();
+  try {
+    const decoded = CryptoJS.enc.Base64.parse(cleanSecret).toString(
+      CryptoJS.enc.Utf8,
+    );
+    if (/^[0-9a-fA-F]{32}$/.test(decoded)) {
+      cleanSecret = decoded;
+    }
+  } catch (_e) {
+    // Keep cleanSecret as is
+  }
+
+  const secretKey = CryptoJS.enc.Base64.parse(cleanSecret);
   const expiration = Math.round(Date.now() + tokenLifetimeSeconds * 1000);
 
   const withoutProtocol = proxyUrl.replace(/^(https?:\/\/)?/, '');
